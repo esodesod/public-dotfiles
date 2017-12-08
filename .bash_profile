@@ -1,4 +1,4 @@
-# esod default bash_profile
+# esod : default bash_profile
 
 # source bashrc if exists
 if [ -f ~/.bashrc ]; then
@@ -11,5 +11,5 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GFh'
 
-# histcontrol
+# histcontrol (more goodies in the bashrc)
 export HISTTIMEFORMAT='%F %T '
