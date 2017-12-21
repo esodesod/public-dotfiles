@@ -18,3 +18,10 @@ alias largefiles1='find . -type f -size +1M -exec du -h '{}' + | sort -hr | head
 alias largefiles2='find . -printf "%s %p\n"| sort -nr | head'
 alias publicip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias remove_ds='find . -type f -name '*.DS_Store' -ls -delete'
+
+# Just being lazy
+alias esx-01='ssh root@esx-01.esod.local'
+alias esx-02='ssh root@esx-02.esod.local'
+alias esx-03='ssh root@esx-03.esod.local'
+alias esx-04='ssh root@esx-04.esod.local'
+alias vc='ssh root@vc.esod.local'
