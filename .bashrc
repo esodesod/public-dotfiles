@@ -4,14 +4,19 @@
 alias ll='ls -hAlF'
 alias l='ls -1hAF'
 
-# histcontrol
-export HISTCONTROL=ignorespace # cause you can't unsee some things..
-shopt -s histappend 
-PROMPT_COMMAND="history -n; history -a" # reload history and append new (old actually, get it?) history
-unset HISTFILESIZE # more history
-HISTSIZE=2000 # wait, how much?
+# HISTORY: Cause I forget stuff
+# ignore command starting with spaces & duplicates
+export HISTCONTROL=ignorespace:ignoredups:erasedups
+# append & reload in any window
+PROMPT_COMMAND="history -a; history -r" 
+# increase history size
+unset HISTFILESIZE
+HISTSIZE=20000 # wait, how much?
+# ignore this for now
+#shopt -s histappend 
+#PROMPT_COMMAND="history -n; history -a"
 
-# Save time, save the world! Use aliases
+# ALIASES: Save time, save the world!
 alias ducks='du -cks * | sort -rn | head'
 alias largefolders='du -hsx * | sort -rh | head'
 alias largefiles1='find . -type f -size +1M -exec du -h '{}' + | sort -hr | head'
@@ -27,5 +32,6 @@ alias esx-03='ssh root@esx-03.esod.local'
 alias esx-04='ssh root@esx-04.esod.local'
 alias esx-05='ssh root@esx-05.esod.local'
 alias esx-vdi-01='ssh root@esx-vdi-01.esod.local'
+alias esx-backup-01='ssh root@esx-backup-01.esod.local'
 alias vc='ssh root@vc.esod.local'
 alias gw='ssh root@gw.esod.local'
