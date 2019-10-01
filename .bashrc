@@ -24,6 +24,7 @@ alias largefiles2='find . -printf "%s %p\n"| sort -nr | head'
 alias publicip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache'
 alias remove_ds='find . -type f -name '*.DS_Store' -ls -delete'
+alias httpd='python -m SimpleHTTPServer'
 
 # Just being lazy
 alias esx-01='ssh root@esx-01.esod.local'
