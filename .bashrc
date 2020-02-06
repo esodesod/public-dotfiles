@@ -37,3 +37,4 @@ alias esx-backup-01='ssh root@esx-backup-01.esod.local'
 alias vc='ssh root@vc.esod.local'
 alias gw='ssh root@gw.esod.local'
 alias route66='sudo route -n add -net 10.0.1.0/24 192.168.100.1 && sudo route -n add -net 192.168.1.0/24 192.168.100.1'
+alias routeback='sudo route -n add -net 10.0.1.0/24 192.168.1.1' # Fix IIT, please.
