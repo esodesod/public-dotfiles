@@ -100,4 +100,4 @@ source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
 
 # Execute
-fortune
+fortune | ponysay
