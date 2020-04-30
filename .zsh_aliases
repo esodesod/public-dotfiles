@@ -25,6 +25,8 @@ alias publicip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache'
 alias remove_ds="find . -type f -name '*.DS_Store' -ls -delete"
 alias httpd='python -m SimpleHTTPServer 8000 & open -a "Google Chrome" http://localhost:8000'
+alias docker-dev='export DOCKER_HOST=tcp://vch-dev.esod.local:2376 DOCKER_TLS_VERIFY=1'
+alias docker-unset='unset DOCKER_HOST DOCKER_TLS_VERIFY'
 
 # Just being lazy
 alias esx-01='ssh root@esx-01.esod.local'
