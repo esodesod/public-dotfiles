@@ -3,6 +3,13 @@
 ## Link rc & alias to current directory
 
 ```bash
-ln -s $(pwd)/.*rc ~/ # link run commands
-ln -s $(pwd)/.*alias* ~/ # link aliases (cause. lazy.)
+ln -s $(pwd)/.*rc ~/
+ln -s $(pwd)/.*alias* ~/
+```
+
+> Same, but overwrite existing (ln -sf)
+
+```bash
+ln -sf $(pwd)/.*rc ~/
+ln -sf $(pwd)/.*alias* ~/
 ```
