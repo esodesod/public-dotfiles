@@ -1,8 +1,9 @@
-# esod : default .bashrc
+# esod : default aliases
 
 # Pretty colors
-alias ll='ls -hAlF'
-alias l='ls -1hAF'
+alias ls='ls -G' # G is now color on MacOS
+alias ll='ls -hAlFG'
+alias l='ls -1hAFG'
 
 # HISTORY: Cause I forget stuff
 # ignore command starting with spaces & duplicates
