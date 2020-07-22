@@ -11,7 +11,7 @@ export HISTCONTROL=ignorespace:ignoredups:erasedups
 PROMPT_COMMAND="history -a; history -r" 
 # increase history size
 unset HISTFILESIZE
-HISTSIZE=20000 # wait, how much?
+HISTSIZE=20000 # wait, how much is that?
 # ignore this for now
 #shopt -s histappend 
 #PROMPT_COMMAND="history -n; history -a"
