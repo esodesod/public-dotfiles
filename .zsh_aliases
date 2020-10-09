@@ -29,6 +29,7 @@ alias httpd='python -m SimpleHTTPServer 8000 & open -a "Google Chrome" http://lo
 alias httpds='/Users/esod/github/esodesod/public-scripts/bash/httpds-with-caddy.sh'
 alias docker-dev='export DOCKER_HOST=tcp://vch-dev.esod.local:2376 DOCKER_TLS_VERIFY=1'
 alias docker-unset='unset DOCKER_HOST DOCKER_TLS_VERIFY'
+alias topcpu='top -stats pid,command,cpu,idlew,power -o power -d'
 
 
 # Just being lazy
