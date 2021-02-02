@@ -27,7 +27,7 @@ alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper
 alias remove_ds="find . -type f -name '*.DS_Store' -ls -delete"
 alias httpd='python -m SimpleHTTPServer 8000 & open -a "Google Chrome" http://localhost:8000'
 alias httpds='/Users/esod/github/esodesod/public-scripts/bash/httpds-with-caddy.sh'
-alias docker-dev='docker -H 10.0.1.21:2376 --tlsverify --tlscert=/Users/esod/Dropbox/temp/vic/vch-dev/cert.pem --tlskey=/Users/esod/Dropbox/temp/vic/vch-dev/key.pem --tlscacert=/Users/esod/Dropbox/temp/vic/vch-dev/ca.pem'
+alias docker-dev='docker -H 10.0.1.21:2376 --tlsverify --tlscert="/Users/esod/Dropbox/04 archives/temp/vic/vch-dev/cert.pem" --tlskey="/Users/esod/Dropbox/04 archives/temp/vic/vch-dev/key.pem" --tlscacert="/Users/esod/Dropbox/04 archives/temp/vic/vch-dev/ca.pem"'
 #alias docker-dev='export DOCKER_HOST=tcp://vch-dev.esod.local:2376 DOCKER_TLS_VERIFY=1'
 alias docker-unset='unset DOCKER_HOST DOCKER_TLS_VERIFY'
 alias topcpu='top -stats pid,command,cpu,idlew,power -o power -d'
