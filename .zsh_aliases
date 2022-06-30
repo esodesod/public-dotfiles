@@ -1,9 +1,15 @@
 # esod : default aliases
 
 # Pretty colors
-alias ls='ls -G' # G is now color on MacOS
-alias ll='ls -hAlFG'
-alias l='ls -1hAFG'
+#alias ls='ls -G' # G is now color on MacOS
+#alias ll='ls -hAlFG'
+#alias l='ls -1hAFG'
+
+# Pretty colors gls
+# Using GNU 'ls'. Install coreutils (homebrew)
+alias ls='gls -hF --group-directories-first --color=auto'
+alias ll='gls -hFAl --group-directories-first --color=auto'
+alias l='gls -hFA1 --group-directories-first --color=auto'
 
 # HISTORY: Cause I forget stuff
 # ignore command starting with spaces & duplicates
