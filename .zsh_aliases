@@ -67,3 +67,7 @@ alias backupobsidian='/Users/esod/github/esodesod/private-resources/backupobsidi
 [[ ! -f /usr/bin/bat ]] || alias cat="bat"
 [[ ! -f /usr/bin/batcat ]] || alias cat="batcat"
 [[ ! -f /opt/homebrew/bin/bat ]] || alias cat="bat"
+
+# fzf searching with bat preview
+function .s { grep -Ril "$1" | fzf --bind='F2:toggle-preview' --preview 'bat --style=numbers --color=always --line-range :500 {}'; }
+#export -f .s
