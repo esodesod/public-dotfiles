@@ -61,3 +61,9 @@ alias plex='ssh deluge@plex.esod.local'
 alias route66='sudo route -n add -net 10.0.1.0/24 192.168.100.1 && sudo route -n add -net 192.168.1.0/24 192.168.100.1'
 alias takemehome='sudo route -n add -net 10.0.1.0/24 192.168.1.1' # Fix IIT, please.
 alias backupobsidian='/Users/esod/github/esodesod/private-resources/backupobsidian.sh'
+
+
+# cat to bat
+[[ ! -f /usr/bin/bat ]] || alias cat="bat"
+[[ ! -f /usr/bin/batcat ]] || alias cat="batcat"
+[[ ! -f /opt/homebrew/bin/bat ]] || alias cat="bat"
