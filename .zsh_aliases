@@ -1,15 +1,23 @@
-# esod : default aliases
+# esod : default aliases for zsh
 
-# Pretty colors
-#alias ls='ls -G' # G is now color on MacOS
-#alias ll='ls -hAlFG'
-#alias l='ls -1hAFG'
+# pretty colors for native ls
+# alias ls='ls -G' # G is now color on MacOS
+# alias ll='ls -hAlFG'
+# alias l='ls -1hAFG'
 
-# Pretty colors gls
+# pretty colors for gls (GNU)
 # Using GNU 'ls'. Install coreutils (homebrew)
 alias ls='gls -hF --group-directories-first --color=auto'
-alias ll='gls -hFAl --group-directories-first --color=auto'
-alias l='gls -hFA1 --group-directories-first --color=auto'
+# alias ll='gls -hFAl --group-directories-first --color=auto'
+# alias l='gls -hFA1 --group-directories-first --color=auto'
+
+# exa is the new ls
+alias l='exa --all --long --no-user --header --icons --git --group-directories-first --sort=name'
+alias x='command exa --all --icons --group-directories-first --sort=name'
+alias tree='exa --tree --level=2 --icons --git-ignore'
+alias treee='exa --tree --level=3 --icons --git-ignore'
+alias treeee='exa --tree --level=4 --icons --git-ignore'
+alias treeeee='exa --tree --level=5 --icons --git-ignore'
 
 # HISTORY: Cause I forget stuff
 # ignore command starting with spaces & duplicates
@@ -40,7 +48,7 @@ alias docker-unset='unset DOCKER_HOST DOCKER_TLS_VERIFY'
 alias topcpu='top -stats pid,command,cpu,idlew,power -o power -d'
 
 
-# Just being lazy
+# Just being lazy sometimes
 alias esx-11='ssh root@esx-11.esod.local'
 alias esx-12='ssh root@esx-12.esod.local'
 alias esx-13='ssh root@esx-13.esod.local'
@@ -48,25 +56,15 @@ alias esx-14='ssh root@esx-14.esod.local'
 alias esx-21='ssh root@esx-21.esod.local'
 alias esx-22='ssh root@esx-22.esod.local'
 alias esx-23='ssh root@esx-23.esod.local'
-alias esx-vdi-01='ssh root@esx-vdi-01.esod.local'
-alias esx-backup-01='ssh root@esx-backup-01.esod.local'
 alias esx-rpi-01='ssh root@esx-rpi-01.esod.local'
 alias esx-rpi-02='ssh root@esx-rpi-02.esod.local'
 alias vc='ssh root@vc.esod.local'
 alias vc-01='ssh root@vc-01.esod.local'
 alias vc-02='ssh root@vc-02.esod.local'
-alias vr-01='ssh root@vr-01.esod.local'
 alias unifi='ssh admin@unifi.esod.local'
-alias plex='ssh deluge@plex.esod.local'
 alias route66='sudo route -n add -net 10.0.1.0/24 192.168.100.1 && sudo route -n add -net 192.168.1.0/24 192.168.100.1'
 alias takemehome='sudo route -n add -net 10.0.1.0/24 192.168.1.1' # Fix IIT, please.
-alias backupobsidian='/Users/esod/github/esodesod/private-resources/backupobsidian.sh'
 
-
-# cat to bat
-[[ ! -f /usr/bin/bat ]] || alias cat="bat -p"
-[[ ! -f /usr/bin/batcat ]] || alias cat="batcat -p"
-[[ ! -f /opt/homebrew/bin/bat ]] || alias cat="bat -p"
 
 # fzf searching with bat preview
 # function .s { grep -Ril "$1" | fzf --bind='F2:toggle-preview' --preview 'bat --style=numbers --color=always --line-range :500 {}'; }
@@ -74,3 +72,11 @@ alias backupobsidian='/Users/esod/github/esodesod/private-resources/backupobsidi
 
 # ibrew
 alias ibrew="arch -x86_64 /usr/local/bin/brew"
+
+# until I really remember to use the new commands
+# exa for ls, really
+[[ ! -f /opt/homebrew/bin/exa ]] | alias ls='command exa --all --icons --group-directories-first --sort=name'
+# cat to bat
+[[ ! -f /usr/bin/bat ]] || alias cat="bat -p"
+[[ ! -f /usr/bin/batcat ]] || alias cat="batcat -p"
+[[ ! -f /opt/homebrew/bin/bat ]] || alias cat="bat -p"
