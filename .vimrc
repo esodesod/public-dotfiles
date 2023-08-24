@@ -14,5 +14,5 @@ set showmatch
 " Copy & Paste
 set pastetoggle=<F10>
 
-" Set relative line number
+" display relative line number
 set relativenumber
