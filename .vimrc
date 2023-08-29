@@ -17,3 +17,6 @@ set showmatch
 
 " paste toogle
 " set pastetoggle=<F10>
+
+" yank to clipboard
+set clipboard=unnamed
