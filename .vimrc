@@ -13,10 +13,13 @@ nmap gd <C-]>
 " searching
 set ignorecase
 set showmatch
-" set incsearch
+" show where the pattern, as it was typed so far, matches
+set incsearch
+" highlight search match
+set hlsearch
 
 " paste toogle
-" set pastetoggle=<F10>
+set pastetoggle=<F10>
 
 " yank to clipboard
 set clipboard=unnamed
