@@ -63,7 +63,7 @@ alias vc-01='ssh root@vc-01.esod.local'
 alias vc-02='ssh root@vc-02.esod.local'
 alias unifi='ssh admin@unifi.esod.local'
 alias route66='sudo route -n add -net 10.0.1.0/24 192.168.100.1 && sudo route -n add -net 192.168.1.0/24 192.168.100.1'
-alias takemehome='sudo route -n add -net 10.0.1.0/24 192.168.1.1' # Fix IIT, please.
+alias takemehome='sudo route -n add -net 10.0.1.0/24 192.168.1.1 && sudo route -n add -net 10.1.1.0/24 192.168.1.1 && sudo route -n add -net 10.2.1.0/24 192.168.1.1'
 
 
 # fzf searching with bat preview
