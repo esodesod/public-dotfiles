@@ -81,4 +81,5 @@ alias ibrew="arch -x86_64 /usr/local/bin/brew"
 [[ ! -f /usr/bin/batcat ]] || alias cat="batcat -p"
 [[ ! -f /opt/homebrew/bin/bat ]] || alias cat="bat -p"
 # vim to nvim
-[[ ! -f /opt/homebrew/bin/nvim ]] || alias vim="nvim"
+# I should remember this by now. Trying without (for a while)
+# [[ ! -f /opt/homebrew/bin/nvim ]] || alias vim="nvim"

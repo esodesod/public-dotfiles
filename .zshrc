@@ -30,7 +30,7 @@ zstyle ':omz:update' frequency 10
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  vi-mode
+  zsh-vi-mode
   zsh-syntax-highlighting
   zsh-autosuggestions
   git
@@ -66,11 +66,8 @@ zmodload zsh/zprof
 # source /opt/homebrew/Cellar/imagemagick/7.1.0-43/bin
 # source /opt/homebrew/Cellar/ghostscript/9.56.1/bin
 
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # kubectl completion for zsh
-source <(kubectl completion zsh)
+# source <(kubectl completion zsh)
 
 # enable vi mode for zsh
 bindkey -v
@@ -81,3 +78,10 @@ VI_MODE_SET_CURSOR=true
 
 # nvim as pager for man
 export MANPAGER='nvim +Man!'
+
+# zsh-vi-mode initialization mode overwriters previous keybindings, let's load them after.
+# define an init function and append to zvm_after_init_commands
+function my_init() {
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+}
+zvm_after_init_commands+=(my_init)
