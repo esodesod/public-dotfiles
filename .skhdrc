@@ -1,0 +1,117 @@
+# skhd config for Espen Ødegaard
+# espenodegaard.com
+# NOTE all built-in modifier and literal keywords can be found at https://github.com/koekeishiya/skhd/issues/1
+
+# change focused window (including windows on next displays)
+alt - h : yabai -m window --focus west || $(yabai -m display --focus west)
+alt - j : yabai -m window --focus south || $(yabai -m display --focus south)
+alt - k : yabai -m window --focus north || $(yabai -m display --focus north)
+alt - l : yabai -m window --focus east || $(yabai -m display --focus east)
+
+# swap windows
+shift + ctrl - h : yabai -m window --swap west || $(yabai -m window --display west; yabai -m display --focus west)
+shift + ctrl - j : yabai -m window --swap south || $(yabai -m window --display south; yabai -m display --focus south)
+shift + ctrl - k : yabai -m window --swap north || $(yabai -m window --display north; yabai -m display --focus north)
+shift + ctrl - l : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east)
+
+# warp windows (re-insert at other windows)
+shift + alt - h : yabai -m window --warp west
+shift + alt - j : yabai -m window --warp south
+shift + alt - k : yabai -m window --warp north
+shift + alt - l : yabai -m window --warp east
+
+# resize windows
+ctrl + alt - h : yabai -m window --resize left:-50:0; yabai -m window --resize right:-50:0
+ctrl + alt - j : yabai -m window --resize bottom:0:50; yabai -m window --resize top:0:50
+ctrl + alt - k : yabai -m window --resize top:0:-50; yabai -m window --resize bottom:0:-50
+ctrl + alt - l : yabai -m window --resize right:50:0; yabai -m window --resize left:50:0
+
+# (re)balance windows (after resized)
+ctrl + alt - space : yabai -m space --balance
+
+# toggle zoom-fullscreen
+alt - f : yabai -m window --toggle zoom-fullscreen
+
+# toggle float (or unfloat) on window -- center on screen
+ctrl + alt + cmd - space : yabai -m window --toggle float --grid 5:5:1:1:3:3
+shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2 # remove this later, when I got the above "in my fingertips"
+
+# toggle window split type
+shift + ctrl - space : yabai -m window --toggle split
+
+# rotate 270 (clockwise)
+shift + alt - r : yabai -m space --rotate 270
+
+# flip along y-axis
+shift + alt - y : yabai -m space --mirror y-axis
+
+# flip along x-axis
+shift + alt - x : yabai -m space --mirror x-axis
+
+# references only -- might (re)try later
+# make floating window fill screen
+# shift + alt - up     : yabai -m window --grid 1:1:0:0:1:1
+
+# make floating window fill left-half of screen
+# shift + alt - left   : yabai -m window --grid 1:2:0:0:1:1
+
+# create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
+# shift + cmd - n : yabai -m space --create && \
+#                   index="$(yabai -m query --spaces --display | jq 'map(select(."is-native-fullscreen" == false))[-1].index')" && \
+#                   yabai -m window --space "${index}" && \
+#                   yabai -m space --focus "${index}"
+
+# fast focus desktop
+# cmd + alt - x : yabai -m space --focus recent
+# cmd + alt - 1 : yabai -m space --focus 1
+
+# send window to desktop and follow focus
+# shift + cmd - z : yabai -m window --space next; yabai -m space --focus next
+# shift + cmd - 2 : yabai -m window --space  2; yabai -m space --focus 2
+
+# focus monitor
+# ctrl + alt - z  : yabai -m display --focus prev
+# ctrl + alt - 3  : yabai -m display --focus 3
+
+# send window to monitor and follow focus
+# ctrl + cmd - c  : yabai -m window --display next; yabai -m display --focus next
+# ctrl + cmd - 1  : yabai -m window --display 1; yabai -m display --focus 1
+
+# move floating window
+# shift + ctrl - a : yabai -m window --move rel:-18:0
+# shift + ctrl - s : yabai -m window --move rel:0:20
+
+# increase window size
+# shift + alt - a : yabai -m window --resize left:-20:0
+# shift + alt - w : yabai -m window --resize top:0:-20
+
+# decrease window size
+# shift + cmd - s : yabai -m window --resize bottom:0:-20
+# shift + cmd - w : yabai -m window --resize top:0:20
+
+# set insertion point in focused container
+# ctrl + alt - h : yabai -m window --insert west
+
+# toggle window zoom
+# alt - d : yabai -m window --toggle zoom-parent
+# alt - f : yabai -m window --toggle zoom-fullscreen
+
+# toggle sticky(+float), picture-in-picture
+# alt - p : yabai -m window --toggle sticky --toggle pip
+
+# stop/start/restart yabai
+# ctrl + alt - q : brew services stop yabai
+# ctrl + alt - s : brew services start yabai
+# ctrl + alt - r : brew services restart yabai
+
+# move window to between workspaces
+# shift + alt - p : yabai -m window --space prev;
+# shift + alt - n : yabai -m window --space next;
+
+# change focus between external displays (left and right)
+# alt - s: yabai -m display --focus west
+# alt - g: yabai -m display --focus east
+
+# move window between displays -- i'm using swap across displays, hence rarely used
+# shift + alt - s : yabai -m window --display west; yabai -m display --focus west;
+# shift + alt - g : yabai -m window --display east; yabai -m display --focus east;
