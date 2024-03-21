@@ -23,3 +23,6 @@ set pastetoggle=<F10>
 
 " yank to clipboard
 set clipboard=unnamed
+
+" fzf
+set rtp+=/opt/homebrew/opt/fzf
