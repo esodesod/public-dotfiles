@@ -18,6 +18,10 @@ config.hide_tab_bar_if_only_one_tab = true
 -- see https://wezfurlong.org/wezterm/config/keyboard-concepts.html#microsoft-windows-and-ctrl-alt-altgr
 config.send_composed_key_when_left_alt_is_pressed = true
 
+-- disable the title bar, but enable the resizable border, should you need to resize the window using your mouse
+-- see https://wezfurlong.org/wezterm/config/lua/config/window_decorations.html
+config.window_decorations = "RESIZE"
+
 -- Use the defaults as a base
 config.hyperlink_rules = wezterm.default_hyperlink_rules()
 
