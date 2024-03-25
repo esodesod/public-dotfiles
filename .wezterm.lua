@@ -25,12 +25,22 @@ config.window_decorations = "RESIZE"
 -- Use the defaults as a base
 config.hyperlink_rules = wezterm.default_hyperlink_rules()
 
+-- testing file links
 -- add file:// URIs into hyperlink_rules
 table.insert(config.hyperlink_rules, {
 	-- match file:// URIs.
 	regex = "\\bfile://\\S*\\b",
 	format = "$0",
 })
+
+-- testing ssh domains
+config.ssh_domains = {
+	{
+		name = 'omnivore',
+		remote_address = 'omnivore.esod.local',
+		username = 'esod',
+	},
+}
 
 -- return the configuration to wezterm
 return config
