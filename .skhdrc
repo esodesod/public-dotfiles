@@ -105,8 +105,8 @@ shift + alt - x : yabai -m space --mirror x-axis
 # ctrl + alt - r : brew services restart yabai
 
 # move window to between workspaces
-# shift + alt - p : yabai -m window --space prev;
-# shift + alt - n : yabai -m window --space next;
+shift + alt - p : yabai -m window --space prev;
+shift + alt - n : yabai -m window --space next;
 
 # change focus between external displays (left and right)
 # alt - s: yabai -m display --focus west
