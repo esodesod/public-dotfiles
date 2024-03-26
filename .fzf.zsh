@@ -12,7 +12,9 @@ fi
 # ------------
 source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
 
-# use ripgrep for searching files
-FZF_CTRL_T_COMMAND="rg --hidden --files"
+# default ctrl-t options
+FZF_CTRL_T_COMMAND="fd --hidden --follow --exclude .git"
 # use fzf-preview.sh
 FZF_CTRL_T_OPTS="--preview='fzf-preview.sh {}' --height=100% --layout=default"
+
+FZF_DEFAULT_COMMAND='fd --hidden --follow --exclude .git'
