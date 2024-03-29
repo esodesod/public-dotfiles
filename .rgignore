@@ -1,6 +1,8 @@
-Library/
-miniconda3/
-Databases/
+.git/
+.github/
 .vscode/
+Library/
+Databases/
+miniconda3/
 gitea/
 nltk_data/
