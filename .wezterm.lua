@@ -1,18 +1,21 @@
 -- wezterm config for esod, mainly from play and learn, as we go.
 
 -- pull in the wezterm API
-local wezterm = require 'wezterm'
+local wezterm = require("wezterm")
 
 -- this will hold the configuration.
 local config = wezterm.config_builder()
 
 -- color scheme:
-config.color_scheme = 'Gruvbox Dark (Gogh)'
+config.color_scheme = "Gruvbox Dark (Gogh)"
 
 -- fonts
-config.font = wezterm.font 'ComicShannsMono Nerd Font'
+config.font = wezterm.font("ComicShannsMono Nerd Font")
 config.font_size = 16.0
 config.hide_tab_bar_if_only_one_tab = true
+
+-- don't confirm on window close
+config.window_close_confirmation = "NeverPrompt"
 
 -- in macOS, make left option key perform composition (AltGr)
 -- see https://wezfurlong.org/wezterm/config/keyboard-concepts.html#microsoft-windows-and-ctrl-alt-altgr
@@ -36,9 +39,9 @@ table.insert(config.hyperlink_rules, {
 -- testing ssh domains
 config.ssh_domains = {
 	{
-		name = 'omnivore',
-		remote_address = 'omnivore.esod.local',
-		username = 'esod',
+		name = "omnivore",
+		remote_address = "omnivore.esod.local",
+		username = "esod",
 	},
 }
 
