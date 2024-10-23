@@ -1,37 +1,8 @@
-# esod : default aliases for zsh
+# NOTE: aliases for zsh by esod
+alias ls='ls --color=auto'
 
-# pretty colors for native ls
-# alias ls='ls -G' # G is now color on MacOS
-# alias ll='ls -hAlFG'
-# alias l='ls -1hAFG'
-
-# pretty colors for gls (GNU)
-# Using GNU 'ls'. Install coreutils (homebrew)
-alias ls='gls -hF --group-directories-first --color=auto'
-alias ll='gls -hFAl --group-directories-first --color=auto'
-alias l='gls -hFA1 --group-directories-first --color=auto'
-
-# exa is the new ls
-#alias l='exa --all --long --no-user --header --icons --git --group-directories-first --sort=name'
-#alias x='command exa --all --icons --group-directories-first --sort=name'
-#alias tree='exa --tree --level=2 --icons --git-ignore'
-#alias treee='exa --tree --level=3 --icons --git-ignore'
-#alias treeee='exa --tree --level=4 --icons --git-ignore'
-#alias treeeee='exa --tree --level=5 --icons --git-ignore'
-
-# HISTORY: Cause I forget stuff
-# ignore command starting with spaces & duplicates
-export HISTCONTROL=ignorespace:ignoredups:erasedups
-# append & reload in any window
-PROMPT_COMMAND="history -a; history -r" 
-# increase history size
-unset HISTFILESIZE
-HISTSIZE=20000 # wait, how much is that?
-# ignore this for now
-#shopt -s histappend 
-#PROMPT_COMMAND="history -n; history -a"
-
-# ALIASES: Save time, save the world!
+# NOTE: aliases.
+# save time, save the world!
 alias ducks='du -cks * | sort -rn | head'
 alias largefolders='du -hsx * | sort -rh | head'
 alias largefiles1='find . -type f -size +1M -exec du -h '{}' + | sort -hr | head'
@@ -41,14 +12,12 @@ alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper
 alias remove_ds="find . -type f -name '*.DS_Store' -ls -delete"
 alias httpd='python -m SimpleHTTPServer 8000 & open -a "Google Chrome" http://localhost:8000'
 alias httpds='/Users/esod/github/esodesod/public-scripts/bash/httpds-with-caddy.sh'
-alias docker-dev='docker -H 10.0.1.21:2376 --tlsverify --tlscert="/Users/esod/Dropbox/04 archives/temp/vic/vch-dev/cert.pem" --tlskey="/Users/esod/Dropbox/04 archives/temp/vic/vch-dev/key.pem" --tlscacert="/Users/esod/Dropbox/04 archives/temp/vic/vch-dev/ca.pem"'
-alias docker-temp='docker -H 10.0.1.50:2375'
 #alias docker-dev='export DOCKER_HOST=tcp://vch-dev.esod.local:2376 DOCKER_TLS_VERIFY=1'
-alias docker-unset='unset DOCKER_HOST DOCKER_TLS_VERIFY'
+# alias docker-unset='unset DOCKER_HOST DOCKER_TLS_VERIFY'
 alias topcpu='top -stats pid,command,cpu,idlew,power -o power -d'
 
 
-# Just being lazy sometimes
+# NOTE: me, just being (really) lazy, sometimes.
 alias esx-11='ssh root@esx-11.esod.local'
 alias esx-12='ssh root@esx-12.esod.local'
 alias esx-13='ssh root@esx-13.esod.local'
@@ -61,7 +30,6 @@ alias esx-rpi-02='ssh root@esx-rpi-02.esod.local'
 alias vc='ssh root@vc.esod.local'
 alias vc-01='ssh root@vc-01.esod.local'
 alias vc-02='ssh root@vc-02.esod.local'
-alias unifi='ssh admin@unifi.esod.local'
 alias route66='sudo route -n add -net 10.0.1.0/24 192.168.100.1 && sudo route -n add -net 192.168.1.0/24 192.168.100.1'
 alias takemehome='sudo route -n add -net 10.0.1.0/24 192.168.1.1 && sudo route -n add -net 10.1.1.0/24 192.168.1.1 && sudo route -n add -net 10.2.1.0/24 192.168.1.1'
 
@@ -73,13 +41,7 @@ alias takemehome='sudo route -n add -net 10.0.1.0/24 192.168.1.1 && sudo route -
 # ibrew
 alias ibrew="arch -x86_64 /usr/local/bin/brew"
 
-# until I really remember to use the new commands
-# exa for ls, really
-# [[ ! -f /opt/homebrew/bin/exa ]] | alias ls='command exa --all --icons --group-directories-first --sort=name'
 # cat to bat
 [[ ! -f /usr/bin/bat ]] || alias cat="bat -p"
 [[ ! -f /usr/bin/batcat ]] || alias cat="batcat -p"
 [[ ! -f /opt/homebrew/bin/bat ]] || alias cat="bat -p"
-# vim to nvim
-# I should remember this by now. Trying without (for a while)
-# [[ ! -f /opt/homebrew/bin/nvim ]] || alias vim="nvim"
