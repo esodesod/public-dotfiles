@@ -49,7 +49,7 @@ unset HISTFILESIZE
 HISTSIZE=20000
 
 # theme via oh-my-posh
-eval "$(oh-my-posh init zsh --config ~/.oh-my-posh/powerlevel10k_rainbow-esod.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.oh-my-posh/powerlevel10k_rainbow-esod-v2.omp.json)"
 
 # zoxide aka `z` for `cd`
 eval "$(zoxide init zsh)"
