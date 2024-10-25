@@ -41,12 +41,16 @@ function my_init() {
 }
 zvm_after_init_commands+=(my_init)
 
-# zsh history options
+# zsh history options (see man zshoptions)
+export HISTSIZE=10000
+export SAVEHIST=10000
 setopt hist_ignore_space
 setopt hist_ignore_dups
-# setopt hist_verify
-unset HISTFILESIZE
-HISTSIZE=20000
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt inc_append_history
+setopt share_history
+setopt hist_verify
 
 # theme via oh-my-posh
 eval "$(oh-my-posh init zsh --config ~/.oh-my-posh/powerlevel10k_rainbow-esod-v2.omp.json)"
