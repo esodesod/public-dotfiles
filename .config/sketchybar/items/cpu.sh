@@ -1,8 +1,8 @@
 #!/bin/bash
 
 cpu_top=(
-  label.font="$FONT:Semibold:7"
-  label=CPU
+  label.font="$FONT:Semibold:9"
+  label=process
   icon.drawing=off
   width=0
   padding_right=15

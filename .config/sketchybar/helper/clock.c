@@ -21,7 +21,8 @@ void callback(CFRunLoopTimerRef timer, void* info) {
 int main() {
   CFRunLoopTimerRef timer = CFRunLoopTimerCreate(kCFAllocatorDefault, (int64_t)CFAbsoluteTimeGetCurrent() + 1.0, 1.0, 0, 0, callback, NULL);
   CFRunLoopAddTimer(CFRunLoopGetMain(), timer, kCFRunLoopDefaultMode);
-  sketchybar("--add item time right");
+  /*sketchybar("--add item time right");*/
+  sketchybar("time");
   CFRunLoopRun();
   return 0;
 }
