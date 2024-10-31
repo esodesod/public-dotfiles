@@ -38,7 +38,7 @@ yabai -m config                                 \
     mouse_modifier               ctrl           \
     mouse_action1                move           \
     mouse_action2                resize         \
-    external_bar                 all:40:0       \
+    # external_bar                 all:40:0       \
     mouse_drop_action            swap
 
 # float system settings
