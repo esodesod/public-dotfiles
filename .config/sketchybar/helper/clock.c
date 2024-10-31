@@ -1,5 +1,5 @@
-// source: https://github.com/FelixKratz/SketchyBar/discussions/454
-// modified to match ISO8601
+// based on: https://github.com/FelixKratz/SketchyBar/discussions/454
+// changed into ISO8601 format, including tz
 
 #include "sketchybar.h"
 #include <CoreFoundation/CoreFoundation.h>
