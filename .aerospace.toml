@@ -129,7 +129,7 @@ alt-b = 'workspace B'
 alt-c = 'workspace C'
 alt-d = 'workspace D'
 alt-e = 'workspace E'
-alt-f = 'workspace F'
+# alt-f = 'workspace F'
 alt-g = 'workspace G'
 alt-i = 'workspace I'
 alt-m = 'workspace M'
@@ -207,7 +207,8 @@ ctrl-alt-j = 'resize smart -50'
 # same, but more size
 ctrl-alt-h = 'resize smart -350'
 ctrl-alt-l = 'resize smart +350'
-
+# fullscreen
+alt-f = 'fullscreen'
 
 
 
