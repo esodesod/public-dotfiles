@@ -36,14 +36,5 @@ table.insert(config.hyperlink_rules, {
 	format = "$0",
 })
 
--- testing ssh domains
-config.ssh_domains = {
-	{
-		name = "omnivore",
-		remote_address = "omnivore.esod.local",
-		username = "esod",
-	},
-}
-
 -- return the configuration to wezterm
 return config
