@@ -7,7 +7,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- color scheme:
-config.color_scheme = "Gruvbox Dark (Gogh)"
+-- config.color_scheme = "Gruvbox Dark (Gogh)"
 
 -- fonts
 config.font = wezterm.font("ComicShannsMono Nerd Font")
