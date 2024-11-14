@@ -36,5 +36,8 @@ table.insert(config.hyperlink_rules, {
 	format = "$0",
 })
 
+-- opacity
+config.window_background_opacity = 0.8
+
 -- return the configuration to wezterm
 return config
