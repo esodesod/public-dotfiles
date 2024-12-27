@@ -17,7 +17,7 @@ source ~/.zsh/zsh-vi-mode/zsh-vi-mode.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# WARNING: seems like autoload and compinit is needed. TBD researc.
+# WARNING: seems like autoload and compinit is needed. TBD research.
 source ~/.zsh/zsh-completions/zsh-completions.plugin.zsh
 fpath=($HOME/.zsh/zsh-completions/src $fpath)
 autoload -U compinit promptinit
@@ -33,6 +33,8 @@ compinit
 
 # nvim as pager for man
 export MANPAGER='nvim +Man!'
+# nvim as zvm `vv` editor
+export ZVM_VI_EDITOR='nvim'
 
 # zsh-vi-mode initialization mode overwriters previous keybindings, let's load them after.
 # define an init function and append to zvm_after_init_commands
