@@ -6,3 +6,4 @@ gitea/
 nltk_data/
 .diffusionbee/
 .npm/
+.alfredpreferences/
