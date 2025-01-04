@@ -12,7 +12,7 @@ after-login-command = []
 after-startup-command = []
 
 # Start AeroSpace at login
-start-at-login = false
+start-at-login = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -36,7 +36,7 @@ default-root-container-orientation = 'auto'
 # See https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
 # Fallback value (if you omit the key): on-focused-monitor-changed = []
-on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+# on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
@@ -162,7 +162,7 @@ alt-shift-b = 'move-node-to-workspace B'
 alt-shift-c = 'move-node-to-workspace C'
 alt-shift-d = 'move-node-to-workspace D'
 alt-shift-e = 'move-node-to-workspace E'
-alt-shift-f = 'move-node-to-workspace F'
+# alt-shift-f = 'move-node-to-workspace F'
 alt-shift-g = 'move-node-to-workspace G'
 alt-shift-i = 'move-node-to-workspace I'
 alt-shift-m = 'move-node-to-workspace M'
@@ -186,19 +186,13 @@ alt-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
-
-
-
 # esod
 # ---
-
 ctrl-alt-cmd-space = 'layout floating tiling'
 ctrl-shift-space = 'layout horizontal vertical'
-
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
 ctrl-shift-l = 'move-node-to-monitor right --focus-follows-window'
 ctrl-shift-h = 'move-node-to-monitor left --focus-follows-window'
-
 # See: https://nikitabobko.github.io/AeroSpace/commands#balance-sizes
 ctrl-alt-space = 'balance-sizes'
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
@@ -209,8 +203,6 @@ ctrl-alt-h = 'resize smart -350'
 ctrl-alt-l = 'resize smart +350'
 # fullscreen
 alt-f = 'fullscreen'
-
-
 
 alt-shift-esc = 'mode service'
 
