@@ -30,7 +30,6 @@ compinit
    export EDITOR='nvim'
  fi
 
-
 # nvim as pager for man
 export MANPAGER='nvim +Man!'
 # nvim as zvm `vv` editor
@@ -55,7 +54,7 @@ setopt share_history
 setopt hist_verify
 
 # theme via oh-my-posh
-eval "$(oh-my-posh init zsh --config ~/.oh-my-posh/powerlevel10k_rainbow-esod-v2.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.oh-my-posh/esod.omp.json)"
 
 # zoxide aka `z` for `cd`
 eval "$(zoxide init zsh)"
