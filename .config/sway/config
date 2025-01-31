@@ -57,9 +57,12 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # Read `man 5 sway-input` for more information about this section.
 
 # Norwegian keyboard, using Apple Macbook Air M1 with Asahi Linux or NixOS
-  input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
+  # input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
+  input * {
       xkb_layout "no"
-      xkb_variant "mac"
+      # xkb_variant "mac"
+      xkb_model "applealu_iso"
+      # model Apple Aluminium ISO, mainly to get ~ and @ working in Asahi Linux or NixOS on Apple MacBook
   }
 
 ### Key bindings
