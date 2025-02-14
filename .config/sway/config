@@ -206,7 +206,10 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date --iso-8601=seconds; do sleep 1; done
+    # Only show date and time in ISO 8601
+    # status_command while date --iso-8601=seconds; do sleep 1; done
+    # Show date and time in ISO 8601 and battery capacity from BAT0
+    status_command while true; do echo -ne "$(date --iso-8601=seconds) [$(cat /sys/class/power_supply/BAT0/capacity)%]\r"; sleep 1; done
 
     colors {
         statusline #ffffff
