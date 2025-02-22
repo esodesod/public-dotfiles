@@ -6,7 +6,7 @@
 ### Variables
 #
 # Usualy Mod1 or Mod4 (I'm using blank keycaps, so whatver)
-set $mod Mod1
+set $mod Mod4
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -34,6 +34,7 @@ input * {
     repeat_delay 200
     # repeat rate (characters per second)
     repeat_rate 50
+    xkb_options caps:escape
 }
 
 
