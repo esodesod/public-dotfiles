@@ -17,4 +17,9 @@ if status is-interactive
     set __fish_git_prompt_showupstream verbose
     set __fish_git_prompt_showstashstate true
 
+    # homebrew
+    /opt/homebrew/bin/brew shellenv | source
+
+    # fzf
+    fzf --fish | source
 end
