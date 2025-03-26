@@ -10,7 +10,7 @@ local config = wezterm.config_builder()
 -- config.color_scheme = "Gruvbox Dark (Gogh)"
 
 -- fonts
-config.font = wezterm.font("ComicShannsMono Nerd Font")
+-- config.font = wezterm.font("ComicShannsMono Nerd Font")
 config.font_size = 16.0
 config.hide_tab_bar_if_only_one_tab = true
 
