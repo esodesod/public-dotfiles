@@ -261,7 +261,7 @@ run = "move-node-to-workspace N"
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.teams2'
-run = "move-node-to-workspace P"
+run = "move-node-to-workspace T"
 
 [[on-window-detected]]
 if.app-id = 'com.hnc.Discord'
@@ -269,4 +269,4 @@ run = "move-node-to-workspace P"
 
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
-run = "move-node-to-workspace P"
+run = "move-node-to-workspace S"
