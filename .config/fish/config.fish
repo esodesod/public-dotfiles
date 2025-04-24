@@ -22,4 +22,7 @@ if status is-interactive
 
     # fzf
     fzf --fish | source
+    
+    # krew for kubectl
+    set -gx PATH $PATH $HOME/.krew/bin
 end
