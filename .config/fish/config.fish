@@ -9,6 +9,9 @@ if status is-interactive
     set -gx EDITOR "nvim"
     set -gx VISUAL "nvim"
 
+    # show full path
+    set -U fish_prompt_pwd_dir_length 0
+
     # fish_git_prompt -- https://fishshell.com/docs/current/cmds/fish_git_prompt.html
     set __fish_git_prompt_show_informative_status true
     set __fish_git_prompt_showdirtystate true
