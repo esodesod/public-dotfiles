@@ -114,8 +114,18 @@ label:focus {
     color: #6c71c4;
 }
 
+#memory {
+    color: #6c71c4;
+}
+
+#battery {
+    color: #6c71c4;
+    min-width: 80px;
+}
+
 #pulseaudio {
-    color: #268bd2;
+    color: #6c71c4;
+    min-width: 100px;
 }
 
 #pulseaudio.muted {
