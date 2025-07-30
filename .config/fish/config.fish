@@ -20,8 +20,10 @@ if status is-interactive
     set __fish_git_prompt_showupstream verbose
     set __fish_git_prompt_showstashstate true
 
-    # homebrew
-    /opt/homebrew/bin/brew shellenv | source
+    # homebrew - only source if brew binary exists
+    if test -x "/opt/homebrew/bin/brew"
+        /opt/homebrew/bin/brew shellenv | source
+    end
 
     # fzf
     fzf --fish | source
