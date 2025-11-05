@@ -13,7 +13,7 @@ set tabstop=2
 set backspace=indent,eol,start
 
 " yank to clipboard
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " searching
 set ignorecase
