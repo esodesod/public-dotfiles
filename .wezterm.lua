@@ -23,7 +23,7 @@ config.send_composed_key_when_left_alt_is_pressed = true
 
 -- disable the title bar, but enable the resizable border, should you need to resize the window using your mouse
 -- see https://wezfurlong.org/wezterm/config/lua/config/window_decorations.html
--- config.window_decorations = "RESIZE"
+config.window_decorations = "RESIZE"
 
 -- Use the defaults as a base
 config.hyperlink_rules = wezterm.default_hyperlink_rules()
@@ -38,6 +38,18 @@ table.insert(config.hyperlink_rules, {
 
 -- opacity
 config.window_background_opacity = 0.8
+
+-- apply the scrollback configuration (including key bindings)
+local scrollback = require("scrollback")
+if scrollback and scrollback.keys then
+  -- Ensure config.keys exists
+  if not config.keys then
+    config.keys = {}
+  end
+  for _, key_binding in ipairs(scrollback.keys) do
+    table.insert(config.keys, key_binding)
+  end
+end
 
 -- return the configuration to wezterm
 return config
