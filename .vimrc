@@ -1,14 +1,19 @@
-" pretty colors
 syntax on
-
-" display relative line number
+set number
 set relativenumber
 
 " identing
+filetype plugin indent on
 set autoindent
+set smartindent
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set backspace=indent,eol,start
 
-" map gd for tag command (a bit tricky on a Norwegian keyboard)
-nmap gd <C-]>
+" yank to clipboard
+set clipboard=unnamedplus
 
 " searching
 set ignorecase
@@ -21,8 +26,8 @@ set hlsearch
 " paste toogle
 set pastetoggle=<F10>
 
-" yank to clipboard
-set clipboard=unnamed
+" map gd for tag command, as tricky keycombo on Norwegian keyboards
+nmap gd <C-]>
 
 " fzf
 set rtp+=/opt/homebrew/opt/fzf
