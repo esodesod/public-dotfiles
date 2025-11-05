@@ -43,7 +43,7 @@ end
 
 wezterm.on("trigger-nvim-with-scrollback", function(window, pane)
 	-- Retrieve the text from the pane
-	local text = pane:get_lines_as_text(pane:get_dimensions().scrollback_rows)
+	local text = pane:get_logical_lines_as_text(pane:get_dimensions().scrollback_rows)
 
 	-- Create a temporary file to pass to nvim
 	local name = os.tmpname()
