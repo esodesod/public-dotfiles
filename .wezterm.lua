@@ -37,7 +37,7 @@ table.insert(config.hyperlink_rules, {
 })
 
 -- opacity
-config.window_background_opacity = 0.8
+-- config.window_background_opacity = 0.8
 
 -- apply the scrollback configuration (including key bindings)
 local scrollback = require("scrollback")
