@@ -27,7 +27,12 @@ if status is-interactive
 
     # fzf
     fzf --fish | source
-    
+
     # krew for kubectl
-    set -gx PATH $PATH $HOME/.krew/bin
+    # set -gx PATH $PATH $HOME/.krew/bin
+
+    # zoxide - only initialize if binary exists
+    if which zoxide > /dev/null
+        zoxide init fish | source
+    end
 end
