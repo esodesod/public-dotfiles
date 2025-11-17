@@ -32,7 +32,7 @@ if status is-interactive
     # set -gx PATH $PATH $HOME/.krew/bin
 
     # zoxide - only initialize if binary exists
-    if which zoxide > /dev/null
+    if command -q zoxide
         zoxide init fish | source
     end
 end
