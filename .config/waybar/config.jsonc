@@ -50,7 +50,10 @@
     "hyprland/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
-        "format-icons": ["", ""],
+        "format-icons": [
+            "",
+            ""
+        ],
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
@@ -93,8 +96,8 @@
     },
     "clock": {
         "timezone": "Europe/Oslo",
-	"format": "{:%Y-%m-%d %H:%M:%S}",
-	"interval": 1,
+        "format": "{:%Y-%m-%d %H:%M:%S}",
+        "interval": 1,
     },
     "cpu": {
         "format": "CPU: {usage}%",
@@ -118,7 +121,11 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": [
+                "",
+                "",
+                ""
+            ]
         },
         "on-click": "pavucontrol"
     },
@@ -135,16 +142,16 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
-        "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
+        "format": "⏻ ",
+        "tooltip": false,
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+        "menu-actions": {
+            "shutdown": "shutdown",
+            "reboot": "reboot",
+            "suspend": "systemctl suspend",
+            "hibernate": "systemctl hibernate"
+        }
     },
     // "battery": {
     //     "bat": "BAT0",
@@ -158,14 +165,19 @@
     //     "max-length": 25
     // }
     "battery": {
+        "bat": "BAT0",
         "format": "{capacity}% {icon}",
-        "format-charging": "⚡ {percentage}% {time}",
+        "interval": 5,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
         "format-icons": {
             "charging": "",
             "discharging": "",
             "full": ""
         },
-        "interval": 15,
+        "max-length": 25,
         "tooltip": true
     }
 }
