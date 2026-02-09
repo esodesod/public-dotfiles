@@ -39,16 +39,20 @@ table.insert(config.hyperlink_rules, {
 -- opacity
 -- config.window_background_opacity = 0.8
 
+-- scrollback per tab
+config.scrollback_lines = 9999
+config.enable_scroll_bar = true
+
 -- apply the scrollback configuration (including key bindings)
 local scrollback = require("scrollback")
 if scrollback and scrollback.keys then
-  -- Ensure config.keys exists
-  if not config.keys then
-    config.keys = {}
-  end
-  for _, key_binding in ipairs(scrollback.keys) do
-    table.insert(config.keys, key_binding)
-  end
+	-- Ensure config.keys exists
+	if not config.keys then
+		config.keys = {}
+	end
+	for _, key_binding in ipairs(scrollback.keys) do
+		table.insert(config.keys, key_binding)
+	end
 end
 
 -- return the configuration to wezterm
