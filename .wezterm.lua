@@ -38,11 +38,22 @@ table.insert(config.hyperlink_rules, {
 
 -- opacity
 -- config.window_background_opacity = 0.8
+-- keys
+config.keys = {
+  { key = 'd',
+    mods = 'CMD',
+    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+  },
+  { key = 'd',
+    mods = 'CMD|SHIFT',
+    action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+  },
+}
+
 
 -- scrollback per tab
 config.scrollback_lines = 9999
 config.enable_scroll_bar = true
-
 -- apply the scrollback configuration (including key bindings)
 local scrollback = require("scrollback")
 if scrollback and scrollback.keys then
