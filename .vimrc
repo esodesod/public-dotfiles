@@ -31,3 +31,5 @@ nmap gd <C-]>
 
 " fzf
 set rtp+=/opt/homebrew/opt/fzf
+
+colorscheme catppuccin
