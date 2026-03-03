@@ -6,8 +6,8 @@ if status is-interactive
         fish_vi_key_bindings
     end
     set -x MANPAGER "nvim +Man!"
-    set -gx EDITOR "nvim"
-    set -gx VISUAL "nvim"
+    set -gx EDITOR nvim
+    set -gx VISUAL nvim
 
     # show full path
     set -U fish_prompt_pwd_dir_length 0
@@ -21,7 +21,7 @@ if status is-interactive
     set __fish_git_prompt_showstashstate true
 
     # homebrew - only source if brew binary exists
-    if test -x "/opt/homebrew/bin/brew"
+    if test -x /opt/homebrew/bin/brew
         /opt/homebrew/bin/brew shellenv | source
     end
 
@@ -34,5 +34,16 @@ if status is-interactive
     # zoxide - only initialize if binary exists
     if command -q zoxide
         zoxide init fish | source
+    end
+
+    # krew
+    if test -x "$HOME/.krew"
+        set -gx KREW_ROOT "$HOME/.krew"
+        fish_add_path $KREW_ROOT/bin
+    end
+
+    # LM Studio CLI (lms)
+    if test -x "$HOME/.lmstudio/bin"
+        set -gx PATH $PATH /Users/esod/.lmstudio/bin
     end
 end
